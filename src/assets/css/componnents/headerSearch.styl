@@ -1,7 +1,9 @@
 .headerTop
-    height: 88px
     display: flex
     align-items: center
+
+    @media screen and (min-width 1024px)
+        height: 88px
 
 .header
     &__search
@@ -10,6 +12,10 @@
         display flex
         justify-content: space-between
         align-items: center
+        padding: 20px 0 
+
+        @media screen and (min-width 1024px)
+            padding: 0
 
         form
             width: 100%
@@ -59,6 +65,11 @@
     flex: 1
     display flex
     align-items: center
+    @media screen and (max-width 1023px)
+        margin 15px 0
 
 .header__account
-    flex 0 0 420px
+    flex 0 0 50px
+
+    @media screen and (min-width 1024px)
+        flex 0 0 420px

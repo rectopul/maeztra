@@ -1,6 +1,9 @@
 .vitrine
     height: calc(585px + 148px)
 
+    @media screen and (max-width 1023px)
+        height: initial
+
     h1
         font-style: normal;
         font-weight: 700;
@@ -36,6 +39,9 @@
 
     .vitrineContainer
         height: 585px
+
+        @media screen and (max-width 1023px)
+            height: initial
 
         .swiper
             height: 100%
@@ -76,10 +82,16 @@
                 margin-bottom: 8px
                 height: 54px
 
+                @media screen and (max-width 1023px)
+                    height: 74px
+
             .title
                 font-style: normal;
                 font-weight: 500;
                 font-size: 16px;
+
+                @media screen and (max-width 1023px)
+                    height: 48px
 
             .price
                 font-style: normal;

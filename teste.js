@@ -134,11 +134,43 @@ console.log(`Sequencia: `, JSON.stringify(createStringSequence(true)));
  */
 
 function trabalho() {
-    const listYear = [
+    const listYears = [
         [1945, 2000],
         [1950, 2002],
-        [1981, 2015],
-        [1986, 2018],
+        [1988, 2015],
+        [1986, 2015],
         [1992, 2021],
     ];
+
+    let moreJobs = 1945;
+
+    var min = listYears
+        .map((i) => i[0])
+        .reduce(function (a, b) {
+            return Math.min(a, b);
+        });
+
+    var max = listYears
+        .map((i) => i[1])
+        .reduce(function (a, b) {
+            return Math.max(a, b);
+        });
+
+    console.log("Menor: ", JSON.stringify(min));
+
+    const anos = max - min;
+
+    for (let i = 0; i < anos; i++) {
+        let cond = 0;
+        listYears.map((y) => {
+            if (y[1] - y[0] > i) cond++;
+            else cond--;
+        });
+
+        console.log(`funcionários: `, cond);
+    }
+
+    console.log(`Ano mais trabalhado`, moreJobs);
 }
+
+trabalho();

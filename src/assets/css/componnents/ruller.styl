@@ -22,6 +22,7 @@
     display flex
     justify-content: center
     align-items: center
+    overflow: hidden
 
     .condition
         flex 0 0 calc(19% - 7.5px)
@@ -60,9 +61,16 @@
     justify-content: space-between
     align-items: center
 
+    @media screen and (max-width 1023px)
+        padding 0 15px !important
+
     .marca
         flex: 0 0 calc(20% - 8px)
         height: 64px
+        text-align: center
 
         img
             height: 100%
+            @media screen and (max-width 1023px)
+                width 100%
+                height: auto
